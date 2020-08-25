@@ -16,11 +16,16 @@
             }
 
             // Function Scope
+            function eventuallyPrintNumber( n ) {
+                setTimeout(function() {
+                    console.log( n )
+                }, 300)
+            }
+
             function printNumbers() {
-                for (var i=0; i<10; i++) {
-                    setTimeout(function() {
-                        console.log( i )
-                    }, 300)
+                var i
+                for (i=0; i<10; i++) {
+                    eventuallyPrintNumber( i )
                 }
             }
 
